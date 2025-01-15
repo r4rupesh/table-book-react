@@ -11,7 +11,7 @@ export default function Table() {
     return (
         <>
             <div className="container">
-           {input.trim() === "" ?
+           {input.trim() === "" || isNaN(input) ?
                 <h1 className="title">Table Book</h1>: <h1 className="title">Table Of {input}</h1>}
 
                 <input type="text" onChange={inputChange} value={input} placeholder="Enter number" className="input"/>
